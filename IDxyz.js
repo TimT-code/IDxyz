@@ -17,4 +17,6 @@
       IDz_pl=function(id,valu){return document.getElementById(id).style.paddingLeft=valu+'px'},
       ltb_8='8px solid lightblue',
       blk_2='2px solid black';
+      
+      var test='12345abcdef';
 //}());
