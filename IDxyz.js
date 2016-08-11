@@ -1,4 +1,4 @@
-(function(){
+(function IDxyz(){
    var
       IDx=function(id){return document.getElementById(id)},
       IDz=function(id){return document.getElementById(id).style},
