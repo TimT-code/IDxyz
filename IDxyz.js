@@ -1,4 +1,4 @@
-(function IDxyz(){
+//(function IDxyz(){
    var
       IDx=function(id){return document.getElementById(id)},
       IDz=function(id){return document.getElementById(id).style},
@@ -17,4 +17,4 @@
       IDz_pl=function(id,valu){return document.getElementById(id).style.paddingLeft=valu+'px'},
       ltb_8='8px solid lightblue',
       blk_2='2px solid black';
-}());
+//}());
