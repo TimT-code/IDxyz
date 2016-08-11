@@ -18,5 +18,3 @@
       ltb_8='8px solid lightblue',
       blk_2='2px solid black';
 }());
-
-window.IDxyz();
