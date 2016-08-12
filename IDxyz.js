@@ -5,6 +5,7 @@
       IDz=function(id){return IDx.style},
       //IDz_dno=function(id){return document.getElementById(id).style.display='none'},
       IDz_dno=function(id){return IDz.display='none'},
+      IDz_dnob=function(id){return IDz.display='none'},
       IDz_din=function(id){return document.getElementById(id).style.display='inline'},
       IDz_dib=function(id){return document.getElementById(id).style.display='inline-block'},
       IDz_dbl=function(id){return document.getElementById(id).style.display='block'},
