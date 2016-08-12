@@ -21,8 +21,12 @@
       IDz_br=function(id,valu){return IDz(id).borderRight=valu},
       IDz_bb=function(id,valu){return IDz(id).borderBottom=valu},
       IDz_bl=function(id,valu){return IDz(id).borderLeft=valu},
-      IDz_w=function(id,valu){return IDz(id).width=valu+'px'},
-      IDz_h=function(id,valu){return IDz(id).height=valu+'px'},
+      IDz_bc=function(id,valu){return IDz(id).borderCollapse=valu},//separate|collapse|initial|inherit
+      IDz_bcl=function(id,valu){return IDz(id).borderColor=valu},//color|transparent|initial|inherit - up to 4 values - IDz_bcl('example', 'red orange blue purple')
+      IDz_bst=function(id,valu){return IDz(id).borderStyle=valu},//none|hidden|dotted|dash|solid|double|groove|ridge|inset|outset|initial|inherit
+      IDz_bw=function(id,valu){return IDz(id).borderWidth=valu},//thin|medium|thick|LENGTH|initial|inherit - use a word to set width, or use length units - IDz_bw('exampleID', '10px') 
+      IDz_w=function(id,valu){return IDz(id).width=valu+'px'},//adds px on to value
+      IDz_h=function(id,valu){return IDz(id).height=valu+'px'},// ""
       IDz_p=function(id,valu){return IDz(id).padding=valu},//2px 10px 5px 3px
       IDz_pt=function(id,valu){return IDz(id).paddingTop=valu+'px'},
       IDz_pr=function(id,valu){return IDz(id).paddingRight=valu+'px'},
