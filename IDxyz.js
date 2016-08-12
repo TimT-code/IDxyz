@@ -1,5 +1,5 @@
-//(function IDxyz(){
-   //var
+function IDxyz(){
+   var
       IDx=function(id){return document.getElementById(id)},
       IDz=function(id){return document.getElementById(id).style},
       IDz_dno=function(id){return document.getElementById(id).style.display='none'},
@@ -19,4 +19,4 @@
       blk_2='2px solid black';
       
       var tester='12345abcdef';
-//}(window));
+}());
