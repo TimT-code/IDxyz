@@ -1,8 +1,10 @@
    //(function IDxyz(){
    var
       IDx=function(id){return document.getElementById(id)},
-      IDy=function(info){querySelector(info)},//first occurence of a class, id, or element (in quotes) - IE8+
-      IDy_all=function(info){querySelectorAll(info)},//all occurences of a class, id, or element, use '*' for all elements (in quotes) - IE9+
+      IDy=function(info){return document.querySelector(info)},//first occurence of a class, id, or element (in quotes) - IE8+
+      IDy_all=function(info){return document.querySelectorAll(info)},//all occurences of a class, id, or element/tagname, use '*' for all elements (in quotes) - IE9+
+      IDy_occ=function(info,occurence){return document.querySelectorAll(info)[occurence]},//specific occurence/number of a class, id, or element/tagname - IE9+ - example..... IDy_occ('p')[0]
+      IDy_et=function(tagname){return document.getElementsByTagName(tagname)},//all elements with a specific tagname (or multiple tag names separated by commas) - Use '*' for ALL tags
       IDz=function(id){return IDx(id).style},
       IDz_dno=function(id){return IDz(id).display='none'},
       IDz_din=function(id){return IDz(id).display='inline'},
