@@ -2,7 +2,7 @@
    var
       IDx=function(id){return document.getElementById(id)},
       //IDz=function(id){return document.getElementById(id).style},
-      IDz=function(id){return IDx.style},
+      IDz=function(id){return IDx(id).style},
       //IDz_dno=function(id){return document.getElementById(id).style.display='none'},
       IDz_dno=function(id){return IDz.display='none'},
       IDz_dnob=function(id){return IDz.display='none'},
