@@ -19,6 +19,6 @@
       blk_2='2px solid black';
       
       var tester='12345abcdef';
-      var tim='#1';
+      var tim='1';
       
    }());
