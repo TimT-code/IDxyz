@@ -4,7 +4,8 @@
       IDy=function(info){return document.querySelector(info)},//first occurence of a class, id, or element (in quotes) - IE8+
       IDy_all=function(info){return document.querySelectorAll(info)},//all occurences of a class, id, or element/tagname, use '*' for all elements (in quotes) - IE9+
       IDy_occ=function(info,occurence){return document.querySelectorAll(info)[occurence]},//specific occurence/number of a class, id, or element/tagname - IE9+ - example..... IDy_occ('p')[0]
-      IDy_et=function(tagname){return document.getElementsByTagName(tagname)},//all elements with a specific tagname (or multiple tag names separated by commas) - Use '*' for ALL tags
+      IDy_et=function(tagname){return document.getElementsByTagName(tagname)},//all specific tagnames (or multiple tag names separated by commas) - Use '*' for ALL tags
+      IDy_eto=function(tagname){return document.getElementsByTagName(tagname)},//a specific occurrence of... from all tagnames - example1....first occurrence of an anchor tag - IDy_eto('a')[0] -- example2... a specific (4th) occurence from all tags - IDy_eto('*')[4] -  all tags
       IDz=function(id){return IDx(id).style},
       IDz_dno=function(id){return IDz(id).display='none'},
       IDz_din=function(id){return IDz(id).display='inline'},
