@@ -14,7 +14,13 @@
       IDz_w=function(id,valu){return IDz(id).width=valu+'px'},
       IDz_h=function(id,valu){return IDz(id).height=valu+'px'},
       IDz_pt=function(id,valu){return IDz(id).paddingTop=valu+'px'},
+      IDz_pr=function(id,valu){return IDz(id).paddingRight=valu+'px'},
+      IDz_pb=function(id,valu){return IDz(id).paddingBottom=valu+'px'},
       IDz_pl=function(id,valu){return IDz(id).paddingLeft=valu+'px'},
+      IDz_mt=function(id,valu){return IDz(id).marginTop=valu+'px'},
+      IDz_mr=function(id,valu){return IDz(id).marginRight=valu+'px'},
+      IDz_mb=function(id,valu){return IDz(id).marginBottom=valu+'px'},
+      IDz_ml=function(id,valu){return IDz(id).marginLeft=valu+'px'},
       ltb_8='8px solid lightblue',
       blk_2='2px solid black';
       
