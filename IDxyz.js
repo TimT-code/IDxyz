@@ -21,4 +21,6 @@
       var tester='12345abcdef';
       var timmy='1';
       
-   }(window));
+      return timmy;
+      
+   }());
