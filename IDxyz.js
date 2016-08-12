@@ -1,4 +1,3 @@
-function IDxyz(){
    var
       IDx=function(id){return document.getElementById(id)},
       IDz=function(id){return document.getElementById(id).style},
@@ -19,4 +18,3 @@ function IDxyz(){
       blk_2='2px solid black';
       
       var tester='12345abcdef';
-};
