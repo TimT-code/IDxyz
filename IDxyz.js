@@ -1,4 +1,4 @@
-(function IDxyz(window){
+(function IDxyz(){
    var
       IDx=function(id){return document.getElementById(id)},
       IDz=function(id){return document.getElementById(id).style},
@@ -19,4 +19,5 @@
       blk_2='2px solid black';
       
       var test='12345abcdef';
+      return IDxyz();
 }());
