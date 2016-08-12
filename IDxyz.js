@@ -1,4 +1,4 @@
-   (function IDxyz(){
+   //(function IDxyz(){
    var
       IDx=function(id){return document.getElementById(id)},
       IDz=function(id){return document.getElementById(id).style},
@@ -20,7 +20,4 @@
       
       var tester='12345abcdef';
       var timmy='1';
-      
-      return timmy;
-      
-   }());
+   //}());
