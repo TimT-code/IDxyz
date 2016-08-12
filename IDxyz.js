@@ -1,5 +1,5 @@
 //(function IDxyz(){
-   var
+   //var
       IDx=function(id){return document.getElementById(id)},
       IDz=function(id){return document.getElementById(id).style},
       IDz_dno=function(id){return document.getElementById(id).style.display='none'},
