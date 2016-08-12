@@ -11,9 +11,9 @@
       IDz_br=function(id,valu){return IDz(id).borderRight=valu},
       IDz_bb=function(id,valu){return IDz(id).borderBottom=valu},
       IDz_bl=function(id,valu){return IDz(id).borderLeft=valu},
-      IDz_w=function(id,valu){return IDz(id).style.width=valu+'px'},
+      IDz_w=function(id,valu){return IDz(id).width=valu+'px'},
       IDz_h=function(id,valu){return IDz(id).height=valu+'px'},
-      IDz_pt=function(id,valu){return IDz(id).style.paddingTop=valu+'px'},
+      IDz_pt=function(id,valu){return IDz(id).paddingTop=valu+'px'},
       IDz_pl=function(id,valu){return IDz(id).paddingLeft=valu+'px'},
       ltb_8='8px solid lightblue',
       blk_2='2px solid black';
