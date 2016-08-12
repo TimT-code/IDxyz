@@ -1,12 +1,16 @@
    //(function IDxyz(){
    var
       IDx=function(id){return document.getElementById(id)},
+      IDy=function(info){querySelector(info)},//first occurence of a class, id, or element (in quotes) - IE8+
+      IDy_all=function(info){querySelectorAll(info)},//all occurences of a class, id, or element, use '*' for all elements (in quotes) - IE9+
       IDz=function(id){return IDx(id).style},
       IDz_dno=function(id){return IDz(id).display='none'},
       IDz_din=function(id){return IDz(id).display='inline'},
       IDz_dib=function(id){return IDz(id).display='inline-block'},
       IDz_dbl=function(id){return IDz(id).display='block'},
       IDz_c=function(id,valu){return IDz(id).color=valu},//red
+      IDz_bg=function(id,valu){return IDz(id).background=valu},//all
+      IDz_bgi=function(id,valu){return IDz(id).background=valu},//background-img src
       IDz_b=function(id,valu){return IDz(id).border=valu},//solid 2px black
       IDz_bt=function(id,valu){return IDz(id).borderTop=valu},
       IDz_br=function(id,valu){return IDz(id).borderRight=valu},
