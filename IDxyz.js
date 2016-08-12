@@ -19,5 +19,5 @@
       blk_2='2px solid black';
       
       var test='12345abcdef';
-      return window.IDxyz();
+      return window.IDxyz;
 }());
