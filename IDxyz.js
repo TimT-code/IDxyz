@@ -18,6 +18,5 @@
       ltb_8='8px solid lightblue',
       blk_2='2px solid black';
       
-      var test='12345abcdef';
-      return IDxyz();
+      var tester='12345abcdef';
 }());
