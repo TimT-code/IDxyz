@@ -18,5 +18,5 @@
       ltb_8='8px solid lightblue',
       blk_2='2px solid black';
       
-      var tester='12345abcdef';
+      tester='12345abcdef';
 }());
