@@ -12,6 +12,7 @@
       IDz_din=function(id){return IDz(id).display='inline'},
       IDz_dib=function(id){return IDz(id).display='inline-block'},
       IDz_dbl=function(id){return IDz(id).display='block'},
+      IDz_btm=function(id,valu){return IDz(id).bottom=valu+'px'},//set bottom position of a positioned element -- IDz_btm('exampleID', '100')
       IDz_c=function(id,valu){return IDz(id).color=valu},//red
       IDz_bg=function(id,valu){return IDz(id).background=valu},//all
       IDz_bgc=function(id,valu){return IDz(id).backgroundColor=valu},//blue
