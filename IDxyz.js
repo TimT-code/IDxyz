@@ -2,6 +2,7 @@
    var
       IDx=function(id){return document.getElementById(id)},//single id
       IDxs=function(id,valu){return document.getElementsByClassName(id)[valu]},//occurence of class name, or multiple class names with spaces between, all in quotes - IDxs('myclassName') - or muliple classes - IDxs('classname1 classname2 classname3') - IDxs('myClassNames','0') - same as document.getElementsByClassName('myClassNames')[0]; -- IE9+
+      //IDxs-Maybe Add a loop to iterate thru the collection - instead of just one occurence.
       IDy=function(info){return document.querySelector(info)},//first occurence of a class, id, or element (in quotes) - IE8+
       IDy_all=function(info){return document.querySelectorAll(info)},//all occurences of a class, id, or element/tagname, use '*' for all elements (in quotes) - IE9+
       IDy_occ=function(info,occurence){return document.querySelectorAll(info)[occurence]},//specific occurence/number of a class, id, or element/tagname - IE9+ - example..... IDy_occ('p')[0]
