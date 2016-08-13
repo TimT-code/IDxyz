@@ -23,8 +23,20 @@
       IDz_bl=function(id,valu){return IDz(id).borderLeft=valu},
       IDz_bc=function(id,valu){return IDz(id).borderCollapse=valu},//separate|collapse|initial|inherit
       IDz_bcl=function(id,valu){return IDz(id).borderColor=valu},//color|transparent|initial|inherit - up to 4 values - IDz_bcl('example', 'red orange blue purple')
+      IDz_btc=function(id,valu){return IDz(id).borderTopColor=valu},
+      IDz_brc=function(id,valu){return IDz(id).borderRightColor=valu},
+      IDz_bbc=function(id,valu){return IDz(id).borderBottomColor=valu},
+      IDz_blc=function(id,valu){return IDz(id).borderLeftColor=valu},
       IDz_bst=function(id,valu){return IDz(id).borderStyle=valu},//none|hidden|dotted|dash|solid|double|groove|ridge|inset|outset|initial|inherit
+      IDz_bts=function(id,valu){return IDz(id).borderTopStyle=valu},
+      IDz_brs=function(id,valu){return IDz(id).borderRightStyle=valu},
+      IDz_bbs=function(id,valu){return IDz(id).borderBottomStyle=valu},
+      IDz_bls=function(id,valu){return IDz(id).borderLeftStyle=valu},
       IDz_bw=function(id,valu){return IDz(id).borderWidth=valu},//thin|medium|thick|LENGTH|initial|inherit - use a word to set width, or use length units - IDz_bw('exampleID', '10px') 
+      IDz_btw=function(id,valu){return IDz(id).borderTopWidth=valu},
+      IDz_brw=function(id,valu){return IDz(id).borderRightWidth=valu},
+      IDz_bbw=function(id,valu){return IDz(id).borderBottomWidth=valu},
+      IDz_blw=function(id,valu){return IDz(id).borderLeftWidth=valu},
       IDz_w=function(id,valu){return IDz(id).width=valu+'px'},//adds px on to value
       IDz_h=function(id,valu){return IDz(id).height=valu+'px'},// ""
       IDz_p=function(id,valu){return IDz(id).padding=valu},//2px 10px 5px 3px
