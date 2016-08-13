@@ -22,6 +22,7 @@
       IDz_bb=function(id,valu){return IDz(id).borderBottom=valu},
       IDz_bl=function(id,valu){return IDz(id).borderLeft=valu},
       IDz_bc=function(id,valu){return IDz(id).borderCollapse=valu},//separate|collapse|initial|inherit
+      IDz_bs=function(id,valu){return IDz(id).borderSpacing=valu},//has no effect if borderCollapse is set to 'collapse'
       IDz_bcl=function(id,valu){return IDz(id).borderColor=valu},//color|transparent|initial|inherit - up to 4 values - IDz_bcl('example', 'red orange blue purple')
       IDz_btc=function(id,valu){return IDz(id).borderTopColor=valu},
       IDz_brc=function(id,valu){return IDz(id).borderRightColor=valu},
