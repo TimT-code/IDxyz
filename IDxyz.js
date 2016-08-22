@@ -52,7 +52,10 @@
       IDz_mr=function(id,valu){return IDz(id).marginRight=valu+'px'},
       IDz_mb=function(id,valu){return IDz(id).marginBottom=valu+'px'},
       IDz_ml=function(id,valu){return IDz(id).marginLeft=valu+'px'},
-      IDz_ws=function(id,valu){return IDz(id).whiteSpace=valu};//normal|nowrap|pre|initial|inherit
+      IDz_ws=function(id,valu){return IDz(id).whiteSpace=valu},//normal|nowrap|pre|initial|inherit
+      IDz_wsp=function(id,valu){return IDz(id).wordSpacing=valu+'px'},//normal|length|initial|inherit - number can be positive, or negative
+      IDz_zi=function(id,valu){return IDz(id).zIndex=valu};//auto|number|initial|inherit - number can be positive, or negative
+      
       //ltb_8='8px solid lightblue',//custom variables copied in - I'll leave em as an example
       //blk_2='2px solid black';// '' change semicolon to comma if not last item after uncomment..
       
