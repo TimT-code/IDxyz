@@ -19,7 +19,7 @@
                                     }else{return document.getElementsByTagName(tagname)
                                     }
                                     },//all specific tagnames (or multiple tag names separated by commas) - Use '*' for ALL tags
-      IDy_tna=function(asterisk){if(arguments[0]){asterisk==='*'}else{asterisk==='*'};return document.getElementsByTagName(asterisk)},//a specific occurrence of... from all tagnames - example1....first occurrence of an anchor tag - IDy_eto('a')[0] -- example2... a specific (4th) occurence from all tags - IDy_eto('*')[4] -  all tags
+      IDy_tna=function(asterisk){if(arguments[0]){asterisk==='*'}else{asterisk==='*'};return document.getElementsByTagName(asterisk)},//all tags
       IDz=function(id){return IDx(id).style},//same as document.getElementById(id).style - easy to remember as styleZ - IDz
       IDz_dno=function(id){return IDz(id).display='none'},
       IDz_din=function(id){return IDz(id).display='inline'},
@@ -73,7 +73,6 @@
       IDz_hpx=function(id,valu){return IDz(id).height=valu+'px'},//width in pixels - 'px' is added already - ID_h you have to add length units yourself
       IDz_zi=function(id,valu){return IDz(id).zIndex=valu};//auto|number|initial|inherit - number can be positive, or negative
       
-      //ltb_8='8px solid lightblue',//custom variables copied in - I'll leave em as an example
-      //blk_2='2px solid black';// '' change semicolon to comma if not last item after uncomment..
+      //You can substitue valu for a variable - example - blk_2='2px solid black';
       
    //}());
