@@ -73,6 +73,6 @@
       IDz_hpx=function(id,valu){return IDz(id).height=valu+'px'},//width in pixels - 'px' is added already - ID_h you have to add length units yourself
       IDz_zi=function(id,valu){return IDz(id).zIndex=valu};//auto|number|initial|inherit - number can be positive, or negative
       
-      //You can substitue valu for a variable - example - blk_2='2px solid black';
+      //You can substitue a variable for a valu  - example - blk_2='2px solid black';
       
    //}());
