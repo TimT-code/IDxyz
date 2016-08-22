@@ -1,13 +1,23 @@
    //(function IDxyz(){
    var
       IDx=function(id){return document.getElementById(id)},//single id
-      IDxs=function(id,valu){return document.getElementsByClassName(id)[valu]},//occurence of class name, or multiple class names with spaces between, all in quotes - IDxs('myclassName') - or muliple classes - IDxs('classname1 classname2 classname3') - IDxs('myClassNames','0') - same as document.getElementsByClassName('myClassNames')[0]; -- IE9+
-      //IDxs-Maybe Add a loop to iterate thru the collection - instead of just one occurence.
-      IDy=function(info){return document.querySelector(info)},//first occurence of a class, id, or element (in quotes) - IE8+
-      IDy_all=function(info){return document.querySelectorAll(info)},//all occurences of a class, id, or element/tagname, use '*' for all elements (in quotes) - IE9+
+      //1st occurence of class name, or multiple class names with spaces between, all in quotes - IDxs('myclassName') - or muliple classes - IDxs('classname1 classname2 classname3')
+      //IDxs('myClassName','0') - same as - IDxs('myClassName') - or same as - document.getElementsByClassName('myClassName')[0];
+      //Only add an index number when it is anything other than '0' - examples - IDxs('myClassName','4') - same as - document.getElementsByClassName('myClassName')[4]; - IE9+
+      IDy=function(class_es,valu){if(arguments[1]){valu===valu}else{valu==='0'};return document.getElementsByClassName(class_es)[valu]},
+      //IDy_loop - best practice is to loop backwards to iterate thru the collection - instead of just one occurence like IDy(class_es)
+      IDy_l=function(){for(var loop=document.getElementsByClassName(class_es).length-1;loop >= 0;--loop){return document.getElementsByClassName(class_es)[loop]},//yet untested
+      IDy_qs=function(info){return document.querySelector(info)},//first occurence of a class, id, or element (in quotes) - IE8+
+      IDy_qsa=function(info){return document.querySelectorAll(info)},//all occurences of a class, id, or element/tagname, use '*' for all elements (in quotes) - IE9+
       IDy_occ=function(info,occurence){return document.querySelectorAll(info)[occurence]},//specific occurence/number of a class, id, or element/tagname - IE9+ - example..... IDy_occ('p')[0]
-      IDy_et=function(tagname){return document.getElementsByTagName(tagname)},//all specific tagnames (or multiple tag names separated by commas) - Use '*' for ALL tags
-      IDy_eto=function(tagname){return document.getElementsByTagName(tagname)},//a specific occurrence of... from all tagnames - example1....first occurrence of an anchor tag - IDy_eto('a')[0] -- example2... a specific (4th) occurence from all tags - IDy_eto('*')[4] -  all tags
+      IDy_tn=function(tagname,dex){
+                                    if(arguments[0]==='*' && !arguments[1]){return document.getElementsByTagName('*')
+                                    }else if{
+                                             if(arguments[0]==='*' && arguments[1]){return document.getElementsByTagName(tagname)[dex]
+                                    }else{return document.getElementsByTagName(tagname)
+                                    }
+                                    },//all specific tagnames (or multiple tag names separated by commas) - Use '*' for ALL tags
+      IDy_tna=function(asterisk){if(arguments[0]){asterisk==='*'}else{asterisk==='*'};return document.getElementsByTagName(asterisk)},//a specific occurrence of... from all tagnames - example1....first occurrence of an anchor tag - IDy_eto('a')[0] -- example2... a specific (4th) occurence from all tags - IDy_eto('*')[4] -  all tags
       IDz=function(id){return IDx(id).style},//same as document.getElementById(id).style - easy to remember as styleZ - IDz
       IDz_dno=function(id){return IDz(id).display='none'},
       IDz_din=function(id){return IDz(id).display='inline'},
@@ -52,8 +62,13 @@
       IDz_mr=function(id,valu){return IDz(id).marginRight=valu+'px'},
       IDz_mb=function(id,valu){return IDz(id).marginBottom=valu+'px'},
       IDz_ml=function(id,valu){return IDz(id).marginLeft=valu+'px'},
+      IDz_wb=function(id,valu){return IDz(id).wordBreak=valu},//normal|break-all|keep-all|initial|inherit
       IDz_ws=function(id,valu){return IDz(id).whiteSpace=valu},//normal|nowrap|pre|initial|inherit
       IDz_wsp=function(id,valu){return IDz(id).wordSpacing=valu+'px'},//normal|length|initial|inherit - number can be positive, or negative
+      IDz_w=function(id,valu){return IDz(id).width=valu},//auto|length|%|initial|inherit - add 'px' or other length units or use IDz_wpx etc
+      IDz_wpx=function(id,valu){return IDz(id).width=valu+'px'},//width in pixels
+      IDz_h=function(id,valu){return IDz(id).height=valu},//auto|length|%|initial|inherit - add 'px' or other length units or use IDz_hpx etc
+      IDz_hpx=function(id,valu){return IDz(id).height=valu+'px'},//width in pixels - 'px' is added already - ID_h you have to add length units yourself
       IDz_zi=function(id,valu){return IDz(id).zIndex=valu};//auto|number|initial|inherit - number can be positive, or negative
       
       //ltb_8='8px solid lightblue',//custom variables copied in - I'll leave em as an example
