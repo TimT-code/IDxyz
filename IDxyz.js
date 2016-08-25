@@ -21,8 +21,9 @@
                                           return document.getElementsByTagName('*')[dex]
                                              }else if(arguments[0]!=='*' && !arguments[1]){
                                                 return document.getElementsByTagName(tagname)[0]
-                                                   else{
-                                                      return document.getElementsByTagName(tagname)[dex]
+                                                   else if(arguments[0]!=='*' && arguments[1]==='*'){
+                                                      var i;for (i = 0; i < arguments[0].length; i++) {
+                                                      return document.getElementsByTagName(tagname)[i]
                                                       }
                                                 },//all specific tagnames (or multiple tag names separated by commas) - Use '*' for ALL tags
       IDy_tna=function(asterisk){if(arguments[0]){asterisk='*'}else{asterisk='*'};return document.getElementsByTagName(asterisk)},//all tags
