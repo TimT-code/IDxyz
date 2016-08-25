@@ -25,7 +25,7 @@
                                                       return document.getElementsByTagName(tagname)[dex]
                                                       }
                                                 },//all specific tagnames (or multiple tag names separated by commas) - Use '*' for ALL tags
-      IDy_tna=function(asterisk){if(arguments[0]){asterisk==='*'}else{asterisk==='*'};return document.getElementsByTagName(asterisk)},//all tags
+      IDy_tna=function(asterisk){if(arguments[0]){asterisk='*'}else{asterisk='*'};return document.getElementsByTagName(asterisk)},//all tags
       IDz=function(id){return IDx(id).style},//same as document.getElementById(id).style - easy to remember as styleZ - IDz
       IDz_dno=function(id){return IDz(id).display='none'},
       IDz_din=function(id){return IDz(id).display='inline'},
