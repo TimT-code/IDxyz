@@ -19,11 +19,11 @@
                                        return document.getElementsByTagName('*')
                                        }else if(arguments[0]==='*' && arguments[1]){
                                           return document.getElementsByTagName(tagname)[dex]
-                                          }else if(arguments[0]!=='*' && arguments[1]){
-                                             return document.getElementsByTagName(tagname)[dex]
-                                             }else{
-                                                return document.getElementsByTagName(tagname)
-                                                }
+                                             }else if(arguments[0]!=='*' && !arguments[1]){
+                                                return document.getElementsByTagName(tagname)[0]
+                                                   else{
+                                                      return document.getElementsByTagName(tagname)[dex]
+                                                      }
                                                 },//all specific tagnames (or multiple tag names separated by commas) - Use '*' for ALL tags
       IDy_tna=function(asterisk){if(arguments[0]){asterisk==='*'}else{asterisk==='*'};return document.getElementsByTagName(asterisk)},//all tags
       IDz=function(id){return IDx(id).style},//same as document.getElementById(id).style - easy to remember as styleZ - IDz
