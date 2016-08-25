@@ -4,7 +4,7 @@
       //1st occurence of class name, or multiple class names with spaces between, all in quotes - IDxs('myclassName') - or muliple classes - IDxs('classname1 classname2 classname3')
       //IDxs('myClassName','0') - same as - IDxs('myClassName') - or same as - document.getElementsByClassName('myClassName')[0];
       //Only add an index number when it is anything other than '0' - examples - IDxs('myClassName','4') - same as - document.getElementsByClassName('myClassName')[4]; - IE9+
-      IDy=function(class_es,valu){if(arguments[1]){valu===valu}else{valu==='0'};return document.getElementsByClassName(class_es)[valu]},
+      IDy=function(class_es,valu){if(!arguments[1]){valu==='0'}else{valu===valu};return document.getElementsByClassName(class_es)[valu]},
       //IDy_l - best practice is to loop backwards to iterate thru the collection/list - instead of just one occurence like IDy(class_es)
       IDy_l=function(class_es){
          for(var loop=document.getElementsByClassName(class_es).length-1;loop >= 0;--loop){
