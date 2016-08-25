@@ -14,19 +14,28 @@
       IDy_qs=function(info){return document.querySelector(info)},//first occurence(only) - of a class, id, or element (in quotes) - IE8+
       IDy_qsa=function(info){return document.querySelectorAll(info)},//all occurences of a class, id, or element/tagname - IE9+
       IDy_occ=function(info,occurence){return document.querySelectorAll(info)[occurence]},//specific occurence/number of a class, id, or element/tagname - IE9+ - example..... IDy_occ('p')[0]
-      IDy_tn=function(tagname,dex){
-                                    if(arguments[0]==='*' && !arguments[1]){
-                                       return document.getElementsByTagName('*')
-                                       }else if(arguments[0]==='*' && arguments[1]){
-                                          return document.getElementsByTagName('*')[dex]
-                                             }else if(arguments[0]!=='*' && !arguments[1]){
-                                                return document.getElementsByTagName(tagname)[0]
-                                                   else if(arguments[0]!=='*' && arguments[1]==='*'){
-                                                      var i;for (i = 0; i < arguments[0].length; i++) {
-                                                         return document.getElementsByTagName(tagname)[i]
-                                                         }else{return document.getElementsByTagName(tagname)[dex]
-                                                            }
-                                                      },//all specific tagnames (or multiple tag names separated by commas) - Use '*' for ALL tags
+      IDy_tn = function(tagname, dex) {
+    if (arguments[0] === '*' && !arguments[1]) {
+      console.log('tested');
+      return document.getElementsByTagName('*')
+    } else if (arguments[0] === '*' && arguments[1]) {
+      console.log('tested1');
+      return document.getElementsByTagName('*')[dex]
+    } else if (arguments[0] !== '*' && !arguments[1]) {
+      console.log('tested2');
+      return document.getElementsByTagName(tagname)[0]
+    } else if (arguments[0] !== '*' && arguments[1] === '*') {
+      var tn = document.getElementsByTagName(tagname);
+      var i;
+      for (i = 0; i < tn.length; i++) {
+        console.log('tested3');
+        return document.getElementsByTagName(tagname)[i]
+      }
+    } else {
+      console.log('tested4');
+      return document.getElementsByTagName(tagname)[dex]
+    }
+  }, //all specific tagnames (or multiple tag names separated by commas) - Use '*' for ALL tags
       IDy_tna=function(asterisk){if(arguments[0]){asterisk='*'}else{asterisk='*'};return document.getElementsByTagName(asterisk)},//all tags
       IDz=function(id){return IDx(id).style},//same as document.getElementById(id).style - easy to remember as styleZ - IDz
       IDz_dno=function(id){return IDz(id).display='none'},
