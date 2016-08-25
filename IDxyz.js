@@ -52,8 +52,6 @@
       IDz_brw=function(id,valu){return IDz(id).borderRightWidth=valu},
       IDz_bbw=function(id,valu){return IDz(id).borderBottomWidth=valu},
       IDz_blw=function(id,valu){return IDz(id).borderLeftWidth=valu},
-      IDz_w=function(id,valu){return IDz(id).width=valu+'px'},//adds px on to value
-      IDz_h=function(id,valu){return IDz(id).height=valu+'px'},// ""
       IDz_p=function(id,valu){return IDz(id).padding=valu},//2px 10px 5px 3px
       IDz_pt=function(id,valu){return IDz(id).paddingTop=valu+'px'},
       IDz_pr=function(id,valu){return IDz(id).paddingRight=valu+'px'},
