@@ -15,13 +15,19 @@
       IDy_qsa=function(info){return document.querySelectorAll(info)},//all occurences of a class, id, or element/tagname - IE9+
       IDy_occ=function(info,occurence){return document.querySelectorAll(info)[occurence]},//specific occurence/number of a class, id, or element/tagname - IE9+ - example..... IDy_occ('p')[0]
       IDy_tn=function(tagname,dex){
-                                    if(arguments[0]==='*' && !arguments[1]){return document.getElementsByTagName('*')
-                                    }else if{
-                                             if(arguments[0]==='*' && arguments[1]){return document.getElementsByTagName(tagname)[dex]
-                                    }else if{
-                                             if(arguments[0]!=='*' && arguments[1]){return document.getElementsByTagName(tagname)[dex]
-                                    }else{return document.getElementsByTagName(tagname)
-                                    }
+                                    if(arguments[0]==='*' && !arguments[1]){
+                                       return document.getElementsByTagName('*')
+                                       }else if{
+                                          if(arguments[0]==='*' && arguments[1]){
+                                             return document.getElementsByTagName(tagname)[dex]
+                                             }
+                                          }else if{
+                                             if(arguments[0]!=='*' && arguments[1]){
+                                                return document.getElementsByTagName(tagname)[dex]
+                                                }
+                                                }else{
+                                                return document.getElementsByTagName(tagname)
+                                                }
                                     },//all specific tagnames (or multiple tag names separated by commas) - Use '*' for ALL tags
       IDy_tna=function(asterisk){if(arguments[0]){asterisk==='*'}else{asterisk==='*'};return document.getElementsByTagName(asterisk)},//all tags
       IDz=function(id){return IDx(id).style},//same as document.getElementById(id).style - easy to remember as styleZ - IDz
