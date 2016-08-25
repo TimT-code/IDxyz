@@ -23,9 +23,10 @@
                                                 return document.getElementsByTagName(tagname)[0]
                                                    else if(arguments[0]!=='*' && arguments[1]==='*'){
                                                       var i;for (i = 0; i < arguments[0].length; i++) {
-                                                      return document.getElementsByTagName(tagname)[i]
-                                                      }
-                                                },//all specific tagnames (or multiple tag names separated by commas) - Use '*' for ALL tags
+                                                         return document.getElementsByTagName(tagname)[i]
+                                                         }else{return document.getElementsByTagName(tagname)[dex]
+                                                            }
+                                                      },//all specific tagnames (or multiple tag names separated by commas) - Use '*' for ALL tags
       IDy_tna=function(asterisk){if(arguments[0]){asterisk='*'}else{asterisk='*'};return document.getElementsByTagName(asterisk)},//all tags
       IDz=function(id){return IDx(id).style},//same as document.getElementById(id).style - easy to remember as styleZ - IDz
       IDz_dno=function(id){return IDz(id).display='none'},
