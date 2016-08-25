@@ -6,7 +6,7 @@
       //Only add an index number when it is anything other than '0' - examples - IDxs('myClassName','4') - same as - document.getElementsByClassName('myClassName')[4]; - IE9+
       IDy=function(class_es,valu){if(arguments[1]){valu===valu}else{valu==='0'};return document.getElementsByClassName(class_es)[valu]},
       //IDy_l - best practice is to loop backwards to iterate thru the collection/list - instead of just one occurence like IDy(class_es)
-      IDy_l=function(){for(var loop=document.getElementsByClassName(class_es).length-1;loop >= 0;--loop){return document.getElementsByClassName(class_es)[loop]},//yet untested
+      IDy_l=function(class_es){for(var loop=document.getElementsByClassName(class_es).length-1;loop >= 0;--loop){return document.getElementsByClassName(class_es)[loop]},//yet untested
       IDy_qs=function(info){return document.querySelector(info)},//first occurence(only) - of a class, id, or element (in quotes) - IE8+
       IDy_qsa=function(info){return document.querySelectorAll(info)},//all occurences of a class, id, or element/tagname - IE9+
       IDy_occ=function(info,occurence){return document.querySelectorAll(info)[occurence]},//specific occurence/number of a class, id, or element/tagname - IE9+ - example..... IDy_occ('p')[0]
