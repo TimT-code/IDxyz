@@ -18,7 +18,7 @@
                                     if(arguments[0]==='*' && !arguments[1]){
                                        return document.getElementsByTagName('*')
                                        }else if(arguments[0]==='*' && arguments[1]){
-                                          return document.getElementsByTagName(tagname)[dex]
+                                          return document.getElementsByTagName('*')[dex]
                                              }else if(arguments[0]!=='*' && !arguments[1]){
                                                 return document.getElementsByTagName(tagname)[0]
                                                    else{
