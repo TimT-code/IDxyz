@@ -12,25 +12,23 @@
             }
             },//yet untested
       IDy_qs=function(info){return document.querySelector(info)},//first occurence(only) - of a class, id, or element (in quotes) - IE8+
-      IDy_qsa=function(info){return document.querySelectorAll(info)},//all occurences of a class, id, or element/tagname - IE9+
-      IDy_occ=function(info,occurence){return document.querySelectorAll(info)[occurence]},//specific occurence/number of a class, id, or element/tagname - IE9+ - example..... IDy_occ('p')[0]
+      IDy_qsa=function(info){var dqsa=document.querySelectorAll(info);var i;for(i=0;i<dqsa.length;i++){return document.querySelectorAll(info)},//all occurences of a class, id, or element/tagname - IE9+
+      IDy_qso=function(info,occurence){return document.querySelectorAll(info)[occurence]},//specific occurence/number of a class, id, or element/tagname - IE9+ - example..... IDy_occ('p')[0]
       IDy_tn = function(tagname, dex) {
-    if (arguments[0] === '*' && !arguments[1]) {
-      console.log('tested');
+    if (arguments[0] === '*' && !arguments[1]) {//tagname=['*']
       return document.getElementsByTagName('*')
-    } else if (arguments[0] === '*' && arguments[1]) {
-      console.log('tested1');
+    } else if (arguments[0] === '*' && arguments[1]) {//tagname[#]
       return document.getElementsByTagName('*')[dex]
-    } else if (arguments[0] !== '*' && !arguments[1]) {
-      console.log('tested2');
+    } else if (arguments[0] !== '*' && !arguments[1]) {//tagname[0]
       return document.getElementsByTagName(tagname)[0]
-    } else if (arguments[0] !== '*' && arguments[1] === '*') {
+    } else if (arguments[0] !== '*' && arguments[1] === '*') {//tagname=tagname['*'] - not working properly
       var tn = document.getElementsByTagName(tagname);
+      var tnArr = [];
       var i;
       for (i = 0; i < tn.length; i++) {
-        console.log('tested3');
-        return document.getElementsByTagName(tagname)[i]
+        tnArr.push(tn[i]);
       }
+      return tnArr;
     } else {
       console.log('tested4');
       return document.getElementsByTagName(tagname)[dex]
