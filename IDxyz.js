@@ -12,7 +12,16 @@
             }
             },//yet untested
       IDy_qs=function(info){return document.querySelector(info)},//first occurence(only) - of a class, id, or element (in quotes) - IE8+
-      IDy_qsa=function(info){var dqsa=document.querySelectorAll(info);var i;for(i=0;i<dqsa.length;i++){return document.querySelectorAll(info)},//all occurences of a class, id, or element/tagname - IE9+
+      IDy_qsa=function(info){
+         var dqsa=document.querySelectorAll(info);
+         var qsa_Arr=[];
+         var i;
+         for(i=0;i<dqsa.length;i++){
+            qsa_Arr.push[i];
+         }
+         return qsa_Arr;
+            //return document.querySelectorAll(info)
+            },//all occurences of a class, id, or element/tagname - IE9+
       IDy_qso=function(info,occurence){return document.querySelectorAll(info)[occurence]},//specific occurence/number of a class, id, or element/tagname - IE9+ - example..... IDy_occ('p')[0]
       IDy_tn = function(tagname, dex) {
     if (arguments[0] === '*' && !arguments[1]) {//tagname=['*']
